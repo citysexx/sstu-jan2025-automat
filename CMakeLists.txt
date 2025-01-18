@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+project(MyProject)
+set(CMAKE_C_STANDARD 99)
+file(GLOB SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/*.c")
+add_executable(GiveMeAutomat ${SOURCES})
+target_link_libraries(GiveMeAutomat m)
