@@ -41,6 +41,21 @@ int **spawnMatrix(int height, int width, int ifPopulate) {
         matrix[h][w] = rand() % (99 - 1 + 1) + 1;
       }
     }
+  } else if (ifPopulate == 0) {
+    printf("Manually filling...\n");
+    for (int h = 0; h < height; h++) {
+      for (int w = 0; w < width; w++) {
+        printf("Enter the item at [%d][%d] >>> ", h, w);
+        scanf("%d", &matrix[h][w]);
+      }
+    }
+
+  } else {
+    for (int h = 0; h < height; h++) {
+      for (int w = 0; w < width; w++) {
+        matrix[h][w] = 0;
+      }
+    }
   }
 
   return matrix;
